@@ -1,0 +1,18 @@
+{
+  "lessons": [
+    {
+      "id": "gd01",
+      "title": "Bài Giảng Về Hành Tinh Trái Đất",
+      "category": "Môn Địa Lý",
+      "filename": "bai_giang_ve_trai_dat.docx",
+      "download_url": "URL_SE_DIEN_SAU"
+    },
+    {
+      "id": "game01",
+      "title": "Trò Chơi Ô Chữ Về Các Châu Lục",
+      "category": "Trò Chơi",
+      "filename": "tro_choi_o_chu_dia_ly.pptx",
+      "download_url": "URL_SE_DIEN_SAU"
+    }
+  ]
+}
