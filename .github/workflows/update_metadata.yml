@@ -30,7 +30,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Có thể dùng phiên bản Python bạn muốn
+          python-version: '3.10'
 
       # Bước 3: Chạy script generate_metadata.py của bạn
       - name: Run script to generate metadata.json
@@ -48,45 +48,4 @@ jobs:
             git push
           else
             echo "No changes to metadata.json. Skipping commit."
-          fi```
-
-### Bước 4: "Nộp Bản Mô Tả Công Việc" (Commit & Push file mới)
-
-Bây giờ, bạn cần tải các file thiết lập này lên GitHub.
-
-1.  Mở GitHub Desktop lên.
-2.  Nó sẽ phát hiện các thay đổi của bạn:
-    *   File `generate_metadata.py` (đã được di chuyển và sửa đổi).
-    *   File `.github/workflows/update_metadata.yml` (file mới).
-3.  Ở ô **Summary**, gõ vào: `Thiết lập quy trình tự động cập nhật metadata`.
-4.  Nhấn **Commit to main**.
-5.  Nhấn **Push origin**.
-
----
-
-### Bước 5: Kiểm Tra Thành Quả!
-
-"Nhân viên" của bạn đã được tuyển dụng và sẵn sàng làm việc. Hãy giao việc cho nó!
-
-1.  **Tạo một thay đổi:**
-    *   Trên máy tính của bạn, trong thư mục `giao-an-cua-toi`, hãy tạo một thư mục mới, ví dụ `BoMonKhac`.
-    *   Thêm một file rỗng vào đó, ví dụ `am_nhac.docx`.
-
-2.  **Đồng bộ hóa thay đổi này:**
-    *   Mở GitHub Desktop. Nó sẽ thấy thư mục và file mới.
-    *   Gõ summary: `Thử nghiệm tự động hóa`.
-    *   Nhấn **Commit to main**.
-    *   Nhấn **Push origin**.
-
-3.  **Xem "Nhân Viên" làm việc:**
-    *   Truy cập kho chứa `giao-an-cua-toi` của bạn trên web.
-    *   Nhấn vào tab **"Actions"**.
-    *   Bạn sẽ thấy một quy trình mới đang chạy (hoặc vừa chạy xong) có tên là "Auto-generate Metadata".
-    *   Nếu nó có dấu tích màu xanh lá cây ✅, nghĩa là "nhân viên" đã làm việc thành công!
-    *   Quay lại tab "Code", bạn sẽ thấy file `metadata.json` đã tự động được cập nhật với thông tin về file `am_nhac.docx` mà bạn không cần phải làm gì cả.
-
-Từ giờ trở đi, **quy trình làm việc mới của bạn** khi muốn thêm/sửa/xóa file sẽ siêu đơn giản:
-1.  **Thực hiện thay đổi** (thêm/sửa/xóa file) trong thư mục `giao-an-cua-toi` trên máy tính.
-2.  Mở GitHub Desktop, **Commit và Push** những thay đổi đó.
-
-**Hết!** "Nhân viên" GitHub Actions sẽ tự động lo phần còn lại.
+          fi
